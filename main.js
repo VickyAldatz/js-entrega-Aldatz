@@ -1,83 +1,37 @@
-// Bucle While
-/*let entrada = prompt ("Ingrese su destino soñado de playa");
+let respuesta1 = prompt("Te gustaría comprar una planta?");
 
-while (entrada != "ESC") {
-    switch (entrada) {
-        case "ARUBA":
-            alert ("Amamos Aruba");
-            break;
-        
-        case "MIAMI":
-            alert ("Party in Maiameeee");
-            break;
+const calcularRespuesta = (servicio) => {
+   switch (servicio) {
+     case "monstera":
+       alert("El precio por unidad es $30.000");
+       break;
 
-        case "BRASIL":
-            alert ("Na praia du Brasil");
-            break;
-        
-        default:
-            alert ("No le gusta la playa??");
-            break;
+     case "agapanthus":
+       alert("El precio por unidad es $20.000");
+       break;
+
+     case "palo de agua":
+       alert("El precio por unidad es $15.000");
+       break;
+
+     default:
+       alert("producto no disponible");
+       break;
+       servicio = prompt("Te gustaría comprar una monstera, agapanthus o un palo de agua?");
+   }
+ };
+
+ while (respuesta1 != "no") {
+   let servicio = prompt("Te gustaría comprar una monstera, agapanthus o un palo de agua?");
+   calcularRespuesta(servicio);
+   let respuesta2 = prompt("Te gustaría agregar una maceta por $10.000?");
+   
+ if (respuesta2 != "no"){
+    alert ("Listo! Agregaste una maceta a tu carrito.");
+    break;
     }
-
-    entrada = prompt ("Ingrese su destino soñado de playa");
-
-}*/
-
-// if
-/*let saludo = prompt("Salude").toLocaleLowerCase();
-if (saludo == "hola"){
-    alert("Hola, cómo estás?");
-}
-else {
-    alert("salude, maleducado!");
-}
-
-
-//Otro if
-let numero = prompt ("Qué número estoy pensando? (Del 1 al 100)");
-
-if (numero < 77){
-    alert ("Ese número es muy bajo. Intenta con uno más alto.");
-    numero =prompt ("Qué número estoy pensando? (Del 1 al 100)");
-}
-if (numero > 77){
-    alert ("Ese número es muy alto. Intenta con uno más bajo.");
-    numero =prompt ("Qué número estoy pensando? (Del 1 al 100)");
-}
-if (numero = 77) {
-    alert ("Ganaste! Estaba pensando en (numero)!!");
-}
-*/
-
-// Función
-function calcular (numero1, numero2, operacion){
-    switch (operacion){
-        case "+":
-            return numero1 + numero2;
-            break;
-
-        case "-":
-            return numero1 - numero2;
-            break;
-
-        case "*":
-            return numero1 * numero2;
-            break;
-
-        case "/":
-            return numero1 / numero2;
-            break;
-        
-        default:
-            return "Esa operación no puede realizarse.";
-        }
-    }
-
-let numero1 = Number(prompt("Ingrese el número 1"));
-let operacion = prompt ("Ingrese la operación que desea realizar");
-let numero2 = Number(prompt("Ingrese el número 2"));
-
-
-let resultado = calcular (numero1, numero2, operacion);
-alert (`${numero1} ${operacion} ${numero2} = ${resultado}`);
+ else {
+    break;
+ }
+ }
+ alert("Gracias por ingresar a nuestra página");
